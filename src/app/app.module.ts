@@ -4,10 +4,12 @@ import { ReactiveFormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { ValidationErrorsComponent } from './validation-errors/validation-errors.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    ValidationErrorsComponent,
   ],
   imports: [
     BrowserModule,

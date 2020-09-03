@@ -2,6 +2,9 @@
   <div>
     <label>username</label>
     <input type="text" formControlName="username" />
+    <app-validation-errors
+      [control]="form.get('username')"
+    ></app-validation-errors>
   </div>
   <div>
     <label>username</label>
@@ -10,14 +13,21 @@
       formControlName="email"
       placeholder="example@example.com"
     />
+    <app-validation-errors
+      [control]="form.get('email')"
+    ></app-validation-errors>
   </div>
   <div>
     <label>password</label>
     <input type="password" formControlName="password" />
+    <app-validation-errors
+      [control]="form.get('password')"
+    ></app-validation-errors>
   </div>
   <div>
     <label>age</label>
     <input type="text" formControlName="age" />
+    <app-validation-errors [control]="form.get('age')"></app-validation-errors>
   </div>
   <div class="address-block">
     <span>addresses ({{ address.controls.length }})</span> &nbsp;
@@ -33,18 +43,30 @@
           </button>
           <label>name</label>
           <input type="text" formControlName="name" />
+          <app-validation-errors
+            [control]="fg.get('name')"
+          ></app-validation-errors>
         </div>
         <div>
           <label>country</label>
           <input type="text" formControlName="country" />
+          <app-validation-errors
+            [control]="fg.get('country')"
+          ></app-validation-errors>
         </div>
         <div>
           <label>city</label>
           <input type="text" formControlName="city" />
+          <app-validation-errors
+            [control]="fg.get('city')"
+          ></app-validation-errors>
         </div>
         <div>
           <label>town</label>
           <input type="text" formControlName="town" />
+          <app-validation-errors
+            [control]="fg.get('town')"
+          ></app-validation-errors>
         </div>
       </div>
     </ng-container>

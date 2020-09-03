@@ -18,7 +18,7 @@ export class AppComponent {
       email: [null, [Validators.required, Validators.email]],
       age: [
         null,
-        [Validators.required, Validators.min(1), Validators.min(100)],
+        [Validators.required, Validators.min(1), Validators.max(100)],
       ],
 
       address: fb.array([this.addressGroup()]),
@@ -36,7 +36,7 @@ export class AppComponent {
       name: [null, Validators.required],
       country: [null, Validators.required],
       city: [null, Validators.required],
-      town: [null, Validators.required],
+      town: null,
     });
   }
 
