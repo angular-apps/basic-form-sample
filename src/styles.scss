@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+input {
+  border-width: 1px;
+}
+
+input.ng-invalid.ng-dirty,
+input.ng-invalid.ng-touched {
+  border: 1px solid rgb(255, 0, 0);
+  background: rgba(255, 0, 0, 0.2);
+}

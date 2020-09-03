@@ -1,0 +1,34 @@
+p {
+  font-family: Lato;
+}
+
+label {
+  display: block;
+}
+
+.values {
+  border: 1px solid #ccc;
+  margin: 1rem;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  background: #efefef;
+  box-shadow: 0 10px 25px #ccc inset;
+}
+
+.value label {
+  font-weight: bold;
+}
+
+.address-block {
+  margin-top: 0.5rem;
+}
+
+.address-item {
+  padding-left: 0.5rem;
+  margin-top: 0.25rem;
+  border-left: 0.25rem solid #ccc;
+}
+
+div {
+  margin: 0.25rem;
+}
