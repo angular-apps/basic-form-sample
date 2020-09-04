@@ -14,7 +14,13 @@ export class AppComponent {
     // 3️⃣ setup the from
     this.form = fb.group({
       username: [null, Validators.required],
-      password: [null, [Validators.required, Validators.minLength(5)]],
+      password: [
+        null,
+        [
+          Validators.required,
+          Validators.minLength(5),
+        ],
+      ],
       email: [null, [Validators.required, Validators.email]],
       age: [
         null,

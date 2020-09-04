@@ -2,25 +2,39 @@
   *ngIf="control.invalid && (control.dirty || control.touched)"
   class="error"
 >
-  <ng-container *ngIf="control.hasError('required')">
-    this field is required.
-  </ng-container>
-  <ng-container *ngIf="control.hasError('pattern')">
-    the value is not valid.
-  </ng-container>
-  <ng-container *ngIf="control.hasError('email')">
-    this not valid email.
-  </ng-container>
-  <ng-container *ngIf="control.hasError('min')">
-    the value is less than the minimum value.
-  </ng-container>
-  <ng-container *ngIf="control.hasError('max')">
-    the value is exceeded the maximum value.
-  </ng-container>
-  <ng-container *ngIf="control.hasError('minLength')">
-    the value length is less than minimum length.
-  </ng-container>
-  <ng-container *ngIf="control.hasError('maxLength')">
-    the value length is exceeded the maximum length.
-  </ng-container>
+  <div *ngIf="control.hasError('required')">
+    {{ errors.required ? errors.required : "this field is required." }}
+  </div>
+
+  <div *ngIf="control.hasError('pattern')">
+    {{ errors.pattern ? errors.pattern : "this value is not valid." }}
+  </div>
+
+  <div *ngIf="control.hasError('email')">
+    {{ errors.email ? errors.email : "this not valid email." }}
+  </div>
+
+  <div *ngIf="control.hasError('min')">
+    {{ errors.min ? errors.min : "the value is less than the minimum value." }}
+  </div>
+
+  <div *ngIf="control.hasError('max')">
+    {{ errors.max ? errors.max : "the value is exceeded the maximum value." }}
+  </div>
+
+  <div *ngIf="control.hasError('minlength')">
+    {{
+      errors.minlength
+        ? errors.minlength
+        : "the value length is less than minimum length."
+    }}
+  </div>
+
+  <div *ngIf="control.hasError('maxlength')">
+    {{
+      errors.maxlength
+        ? errors.maxlength
+        : "the value length is exceeded the maximum length."
+    }}
+  </div>
 </div>

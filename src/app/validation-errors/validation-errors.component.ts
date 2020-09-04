@@ -9,4 +9,7 @@ import { FormGroup, FormControl } from "@angular/forms";
 export class ValidationErrorsComponent {
   @Input()
   control: FormControl;
+
+  @Input()
+  errors: { [key: string]: string } = {};
 }

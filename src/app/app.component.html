@@ -2,6 +2,7 @@
   <div>
     <label>username</label>
     <input type="text" formControlName="username" />
+
     <app-validation-errors
       [control]="form.get('username')"
     ></app-validation-errors>
@@ -13,9 +14,8 @@
       formControlName="email"
       placeholder="example@example.com"
     />
-    <app-validation-errors
-      [control]="form.get('email')"
-    ></app-validation-errors>
+    <app-validation-errors [control]="form.get('email')">
+    </app-validation-errors>
   </div>
   <div>
     <label>password</label>
@@ -29,6 +29,7 @@
     <input type="text" formControlName="age" />
     <app-validation-errors [control]="form.get('age')"></app-validation-errors>
   </div>
+
   <div class="address-block">
     <span>addresses ({{ address.controls.length }})</span> &nbsp;
     <button (click)="addNewAddress()">Add New Address ➕</button>
@@ -71,6 +72,7 @@
       </div>
     </ng-container>
   </div>
+
   <div>
     <button (click)="save()" [disabled]="form.invalid">save 💾</button>
   </div>
